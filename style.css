@@ -1,0 +1,1191 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.fondo{
+    background-image: url(imagenes/fondonav.jpg);
+}
+body{
+    background-image: url(imagenes/fondo.jpg);
+}
+.titulo{
+    text-align: center;
+    font-size: 35px;
+    margin: 10px;
+    border: 1px solid #000;
+    background-color: #666;
+}
+.footer-h5{
+    font-size: 16px;
+    color: #ffffff;
+    display: inline;
+}
+.buscar{
+    border-radius: 30px;
+}
+.buscar:focus{
+    transform: none;
+}
+.li-footer{
+    display: inline;
+    
+}
+.redes{
+    color: #ffffff;
+    display: inline;
+}
+.redes:hover{
+    color: lightcoral;
+}
+footer{
+    background-image: url(imagenes/fondonav.jpg);
+}
+/*index*/
+/*index*/
+/*index*/
+/*index*/
+.grid-index-container{
+    margin: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(2, 370px);
+    gap: 1px;
+    grid-template-areas: 
+    "imagen1-index imagen2-index imagen3-index"
+    "a3-index a1-index a2-index";
+}
+.imagen1-index{
+    grid-area: imagen1-index;
+    margin: 8px;;
+    width: 90%;
+}
+.imagen2-index{
+    grid-area: imagen2-index;
+    margin: 8px;
+    width: 90%;
+}
+.imagen3-index{
+    grid-area: imagen3-index;
+    margin: 8px;
+    width: 90%;
+}
+.a1-index{
+    grid-area: a1-index;
+    text-align: center;
+    margin-top: 60%;
+    font-size: 30px;
+    text-decoration: none;
+    color: blue;
+}
+.a1-index:hover{
+    color: red;
+}
+.a2-index{
+    grid-area: a2-index;
+    text-align: center;
+    margin-top: 53%;
+    margin-bottom: 10%;
+    font-size: 30px;
+    text-decoration: none;
+    color: blue;
+}
+.a2-index:hover{
+    color: red;
+}
+.a3-index{
+    grid-area: a3-index;
+    text-align: center;
+    margin-top: 49%;
+    margin-bottom: 10%;
+    font-size: 30px;
+    text-decoration: none;
+    color: blue;
+    padding: 0px;
+}
+.a3-index:hover{
+    color: red;
+}
+@media screen and (max-width: 768px){
+    .grid-index-container{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 45%);
+        grid-template-rows: repeat(4,25%);
+        grid-template-areas: 
+        "imagen1-index imagen2-index"
+        "a3-index a1-index"
+        "imagen3-index none"
+        "a2-index none";
+        
+    }
+    .imagen1-index{
+        grid-area: imagen1-index;
+        margin-right: 10px;
+    }
+    .imagen2-index{
+        grid-area: imagen2-index;
+        
+    }
+    .imagen3-index{
+        grid-area: imagen3-index;
+        margin-top: 0%;
+        align-items: center;
+    }
+    .a3-index{
+        grid-area: a3-index;
+        margin-top: 35%;
+    }
+    .a1-index{
+        grid-area: a1-index;
+        margin-top: 40%;
+    }
+    .a2-index{
+        grid-area: a2-index;
+    }
+}
+@media screen and (max-width: 420px){
+    .grid-index-container{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6,300px);
+        grid-template-areas: 
+        "imagen1-index"
+        "a3-index" 
+        "imagen2-index"
+        "a1-index"
+        "imagen3-index"
+        "a2-index" 
+        
+    }
+    .imagen1-index{
+        grid-area: imagen1-index;
+        
+    }
+    .imagen2-index{
+        grid-area: imagen2-index;
+        
+    }
+    .imagen3-index{
+        grid-area: imagen3-index;
+    }
+    .a3-index{
+        grid-area: a3-index;
+        margin-top: 47%;
+    }
+    .a1-index{
+        grid-area: a1-index;
+        margin-top: 60%;
+    }
+    .a2-index{
+        grid-area: a2-index;
+        margin-top: 48%;
+    }
+}
+/*contacto*/
+/*contacto*/
+/*contacto*/
+/*contacto*/
+input{
+    caret-color: aqua;
+}
+input:focus{
+    transform: scale(2, 2);
+    border-radius: 30px;
+}
+.contacto-h3{
+    text-align: center;
+    font-size: 20px;
+}
+.formulario-fieldset{
+    width: 50%;
+    margin: 50px auto;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    grid-template-areas: 
+    "label-nombre label-nombre"
+    "nombre nombre"
+    "label-email label-email"
+    "email email"
+    "label-telefono label-telefono"
+    "telefono telefono"
+    "label-mensaje label-mensaje"
+    "mensaje mensaje"
+    "none enviar";
+    gap: 10px;
+}
+#nombre, #email, #telefono, #mensaje{
+    background-image: url(imagenes/fondonav.jpg);
+    border-radius: 15px;
+    border: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+#mensaje{
+    grid-area: mensaje;
+    height: 150px;
+}
+label{
+    text-align: left;
+    padding-left: 10px;
+}
+#enviar{
+    grid-area: enviar;
+    background-color: #000;
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+}
+.label-nombre{grid-area: label-nombre;}
+#nombre{grid-area: nombre;}
+.label-email{grid-area: label-email;}
+#email{grid-area: email;}
+.label-telefono{grid-area: label-telefono;}
+#telefono{grid-area: telefono;}
+.label-mensaje{ grid-area: label-mensaje;}
+/*remeras*/
+/*remeras*/
+/*remeras*/
+/*remeras*/
+.grid-remeras-container{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(2,47%);
+    grid-template-areas:
+    "remeras1 remeras2 remeras3 remeras4 remeras5" 
+    "precio1 precio2 precio3 precio4 precio5"
+    
+}
+.grid-remeras-container2{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(2,47%);
+    grid-template-areas:
+    "remeras6 remeras7 remeras8 remeras9 remeras10" 
+    "precio6 precio7 precio8 precio9 precio10"
+    
+}
+.remeras1{
+    grid-area: remeras1;
+    /*transition: height, width, 2s;*/
+}
+/*
+.remeras1:hover{
+    height: 400px;
+    width: 300px;
+    position: absolute;
+}*/
+.remeras2{
+    grid-area: remeras2;
+    
+}
+.remeras3{
+    grid-area: remeras3;
+    
+}
+.remeras4{
+    grid-area: remeras4;
+    
+}
+.remeras5{
+    grid-area: remeras5;
+    
+}
+.remeras6{
+    grid-area: remeras6;
+    
+}
+.remeras7{
+    grid-area: remeras7;
+    
+}
+.remeras8{
+    grid-area: remeras8;
+    
+}
+.remeras9{
+    grid-area: remeras9;
+    
+}
+.remeras10{
+    grid-area: remeras10;
+}
+.remeras1, .remeras2, .remeras3, .remeras4, .remeras5, .remeras6, .remeras7, .remeras8, .remeras9, .remeras10{
+    object-fit: cover;
+    width: 250px;
+    height: 350px;
+    margin: 15px;
+    border: 2px solid black;
+    border-radius: 10%;
+}
+.precio1{
+    grid-area: precio1;
+    
+}
+.precio2{
+    grid-area: precio2;
+    
+}
+.precio3{
+    grid-area: precio3;
+    
+}
+.precio4{
+    grid-area: precio4;
+    
+}
+.precio5{
+    grid-area: precio5;
+    
+}
+.precio6{
+    grid-area: precio6;
+    
+}
+.precio7{
+    grid-area: precio7;
+    
+}
+.precio8{
+    grid-area: precio8;
+    
+}
+.precio9{
+    grid-area: precio9;
+    
+}
+.precio10{
+    grid-area: precio10;
+    
+}
+.precio1, .precio2, .precio3, .precio4, .precio5, .precio6, .precio7, .precio8, .precio9, .precio10{
+    text-align: center;
+    margin-top: 120px;
+    text-decoration: none;
+    color: black;
+    font-size: 24px
+}
+@media screen and (max-width: 1200px){
+    .grid-remeras-container{
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        grid-template-rows: repeat(4,20%);
+        grid-template-areas:
+        "remeras1 remeras2 remeras3" 
+        "precio1 precio2 precio3" 
+        "remeras4 remeras5 none" 
+        "precio4 precio5 none"
+        }
+        .remeras1{
+            grid-area: remeras1;
+        }
+        .remeras2{
+            grid-area: remeras2;
+        }
+        .remeras3{
+            grid-area: remeras3;
+        }
+        .remeras4{
+            grid-area: remeras4;
+        }
+        .remeras5{
+            grid-area: remeras5;
+        }
+        .remeras1, .remeras2, .remeras3, .remeras4, .remeras5,.remeras6, .remeras7, .remeras8, .remeras9, .remeras10 {
+            object-fit: cover;
+            width: 200px;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 10%;
+        }
+        .precio1{
+            grid-area: precio1;
+        }
+        .precio2{
+            grid-area: precio2;
+        }
+        .precio3{
+            grid-area: precio3;
+        }
+        .precio4{
+            grid-area: precio4;
+        }
+        .precio5{
+            grid-area: precio5;
+        }
+        .precio1, .precio2, .precio3, .precio4, .precio5, .precio6, .precio7, .precio8, .precio9, .precio10{
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-size: 24px
+        }
+        .grid-remeras-container2{
+            display: grid;
+            grid-template-columns: repeat(3, 30%);
+            grid-template-rows: repeat(4,20%);
+            grid-template-areas:
+            "remeras6 remeras7 remeras8" 
+            "precio6 precio7 precio8" 
+            "remeras9 remeras10 none" 
+            "precio9 precio10 none"
+            }
+            .remeras6{
+                grid-area: remeras6;
+            }
+            .remeras7{
+                grid-area: remeras7;
+            }
+            .remeras8{
+                grid-area: remeras8;
+            }
+            .remeras9{
+                grid-area: remeras9;
+            }
+            .remeras10{
+                grid-area: remeras10;
+            }
+            .precio6{
+                grid-area: precio6;
+            }
+            .precio7{
+                grid-area: precio7;
+            }
+            .precio8{
+                grid-area: precio8;
+            }
+            .precio9{
+                grid-area: precio9;
+            }
+            .precio10{
+                grid-area: precio10;
+            }
+}
+@media screen and (max-width: 768px){
+    .grid-remeras-container{
+        display: grid;
+        grid-template-columns: repeat(2, 40%);
+        grid-template-rows: repeat(6,15%);
+        grid-template-areas:
+        "remeras1 remeras2" 
+        "precio1 precio2" 
+        "remeras3 remeras4" 
+        "precio3 precio4"
+        "remeras5 none"
+        "precio5 none"
+        }
+        .remeras1{
+            grid-area: remeras1;
+            margin-left: 20px;
+        }
+        
+        .remeras2{
+            grid-area: remeras2;
+            margin-left: 60px;
+        }
+        .remeras3{
+            grid-area: remeras3;
+            margin-left: 20px;
+        }
+        .remeras4{
+            grid-area: remeras4;
+            margin-left: 60px;
+        }
+        .remeras5{
+            grid-area: remeras5;
+            margin-left: 20px;
+        }
+        .remeras1, .remeras2, .remeras3, .remeras4, .remeras5,.remeras6, .remeras7, .remeras8, .remeras9, .remeras10 {
+            object-fit: cover;
+            width: 175px;
+            height: 275px;
+            
+            border: 1px solid black;
+            border-radius: 10%;
+            
+        }
+        .precio1{
+            grid-area: precio1;
+            margin-left: 20px;
+        }
+        .precio2{
+            grid-area: precio2;
+            margin-left: 60px;
+        }
+        .precio3{
+            grid-area: precio3;
+            margin-left: 20px;
+        }
+        .precio4{
+            grid-area: precio4;
+            margin-left: 60px;
+        }
+        .precio5{
+            grid-area: precio5;
+            margin-left: 20px;
+        }
+        .precio1, .precio2, .precio3, .precio4, .precio5, .precio6, .precio7, .precio8, .precio9, .precio10{
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-size: 24px
+        }
+        .grid-remeras-container2{
+            display: grid;
+            grid-template-columns: repeat(2, 40%);
+            grid-template-rows: repeat(6,15%);
+            grid-template-areas:
+            "remeras6 remeras7" 
+            "precio6 precio7" 
+            "remeras8 remeras9" 
+            "precio8 precio9"
+            "remeras10 none"
+            "precio10 none"
+            }
+            .remeras6{
+                grid-area: remeras6;
+                margin-left: 20px;
+            }
+            .remeras7{
+                grid-area: remeras7;
+                margin-left: 60px;
+            }
+            .remeras8{
+                grid-area: remeras8;
+                margin-left: 20px;
+            }
+            .remeras9{
+                grid-area: remeras9;
+                margin-left: 60px;
+            }
+            .remeras10{
+                grid-area: remeras10;
+                margin-left: 20px;
+            }
+            .precio6{
+                grid-area: precio6;
+                margin-left: 20px;
+            }
+            .precio7{
+                grid-area: precio7;
+                margin-left: 60px;
+            }
+            .precio8{
+                grid-area: precio8;
+                margin-left: 20px;
+            }
+            .precio9{
+                grid-area: precio9;
+                margin-left: 60px;
+            }
+            .precio10{
+                grid-area: precio10;
+                margin-left: 20px;
+            }
+    
+}
+@media screen and (max-width: 420px){
+    .grid-remeras-container{
+        display: grid;
+        grid-template-columns: repeat(2, 30%);
+        grid-template-rows: repeat(6,11%);
+        grid-template-areas:
+        "remeras1 remeras2" 
+        "precio1 precio2" 
+        "remeras3 remeras4" 
+        "precio3 precio4"
+        "remeras5 none"
+        "precio5 none"
+        }
+        .remeras1{
+            grid-area: remeras1;
+            margin-top: 20px;
+        }
+        
+        .remeras2{
+            grid-area: remeras2;
+            margin-top: 20px;
+        }
+        .remeras3{
+            grid-area: remeras3;
+            margin-top: 20px;
+        }
+        .remeras4{
+            grid-area: remeras4;
+            margin-top: 20px;
+        }
+        .remeras5{
+            grid-area: remeras5;
+            margin-top: 20px;
+        }
+        .remeras1, .remeras2, .remeras3, .remeras4, .remeras5,.remeras6, .remeras7, .remeras8, .remeras9, .remeras10 {
+            object-fit: cover;
+            width: 100px;
+            height: 200px;
+            
+            border: 1px solid black;
+            border-radius: 10%;
+            
+        }
+        .precio1{
+            grid-area: precio1;
+            margin-left: 20px;
+        }
+        .precio2{
+            grid-area: precio2;
+            margin-left: 80px;
+        }
+        .precio3{
+            grid-area: precio3;
+            margin-left: 20px;
+        }
+        .precio4{
+            grid-area: precio4;
+            margin-left: 80px;
+        }
+        .precio5{
+            grid-area: precio5;
+            margin-left: 20px;
+        }
+        .precio1, .precio2, .precio3, .precio4, .precio5, .precio6, .precio7, .precio8, .precio9, .precio10{
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-size: 16px
+        }
+        .grid-remeras-container2{
+            display: grid;
+            grid-template-columns: repeat(2, 30%);
+            grid-template-rows: repeat(6,11%);
+            grid-template-areas:
+            "remeras6 remeras7" 
+            "precio6 precio7" 
+            "remeras8 remeras9" 
+            "precio8 precio9"
+            "remeras10 none"
+            "precio10 none"
+            }
+            .remeras6{
+                grid-area: remeras6;
+                margin-top: 20px;
+            
+            }
+            .remeras7{
+                grid-area: remeras7;
+                margin-top: 20px;
+            }
+            .remeras8{
+                grid-area: remeras8;
+                margin-top: 20px;
+            }
+            .remeras9{
+                grid-area: remeras9;
+                margin-top: 20px;
+            }
+            .remeras10{
+                grid-area: remeras10;
+                margin-top: 20px;
+            }
+            .precio6{
+                grid-area: precio6;
+                margin-left: 20px;
+            }
+            .precio7{
+                grid-area: precio7;
+                margin-left: 80px;
+            }
+            .precio8{
+                grid-area: precio8;
+                margin-left: 20px;
+            }
+            .precio9{
+                grid-area: precio9;
+                margin-left: 80px;
+            }
+            .precio10{
+                grid-area: precio10;
+                margin-left: 20px;
+            }
+    
+}
+/*buzos*/ 
+/*buzos*/
+/*buzos*/
+/*buzos*/
+.grid-buzos-container{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(2, 50%);
+    grid-template-areas:
+    "buzos1 buzos2 buzos3 buzos4 buzos5" 
+    "buzos-precio1 buzos-precio2 buzos-precio3 buzos-precio4 buzos-precio5";
+}
+.grid-buzos-container2{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(2, 50%);
+    grid-template-areas:
+    "buzos6 buzos7 buzos8 buzos9 buzos10" 
+    "buzos-precio6 buzos-precio7 buzos-precio8 buzos-precio9 buzos-precio10";
+}
+.buzos1{
+    grid-area: buzos1;
+    
+}
+.buzos2{
+    grid-area: buzos2;
+    
+}
+.buzos3{
+    grid-area: buzos3;
+    
+}
+.buzos4{
+    grid-area: buzos4;
+    
+}
+.buzos5{
+    grid-area: buzos5;
+    
+}
+.buzos6{
+    grid-area: buzos6;
+    
+}
+.buzos7{
+    grid-area: buzos7;
+    
+}
+.buzos8{
+    grid-area: buzos8;
+    
+}
+.buzos9{
+    grid-area: buzos9;
+    
+}
+.buzos10{
+    grid-area: buzos10;
+    
+}
+.buzos1, .buzos2, .buzos3, .buzos4, .buzos5, .buzos6, .buzos7, .buzos8, .buzos9, .buzos10{
+    object-fit: cover;
+    width: 250px;
+    height: 350px;
+    margin: 15px;
+    border: 2px solid black;
+    border-radius: 10%;
+    
+}
+
+.buzos-precio1{
+    grid-area: buzos-precio1;
+    
+}
+.buzos-precio2{
+    grid-area: buzos-precio2;
+    
+}
+.buzos-precio3{
+    grid-area: buzos-precio3;
+    
+}
+.buzos-precio4{
+    grid-area: buzos-precio4;
+    
+}
+.buzos-precio5{
+    grid-area: buzos-precio5;
+    
+}
+.buzos-precio6{
+    grid-area: buzos-precio6;
+    
+}
+.buzos-precio7{
+    grid-area: buzos-precio7;
+    
+}
+.buzos-precio8{
+    grid-area: buzos-precio8;
+    
+}
+.buzos-precio9{
+    grid-area: buzos-precio9;
+    
+}
+.buzos-precio10{
+    grid-area: buzos-precio10;
+    
+}
+.buzos-precio1, .buzos-precio2, .buzos-precio3, .buzos-precio4, .buzos-precio5, .buzos-precio6, .buzos-precio7, .buzos-precio8, .buzos-precio9, .buzos-precio10{
+    text-align: center;
+    margin-top: 110px;
+    text-decoration: none;
+    color: black;
+    font-size: 24px
+}
+@media screen and (max-width: 1200px){
+    .grid-buzos-container{
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        grid-template-rows: repeat(4,20%);
+        grid-template-areas:
+        "buzos1 buzos2 buzos3" 
+        "buzos-precio1 buzos-precio2 buzos-precio3" 
+        "buzos4 buzos5 none" 
+        "buzos-precio4 buzos-precio5 none"
+        }
+        .buzos1{
+            grid-area: buzos1;
+        }
+        .buzos2{
+            grid-area: buzos2;
+        }
+        .buzos3{
+            grid-area: buzos3;
+        }
+        .buzos4{
+            grid-area: buzos4;
+        }
+        .buzos5{
+            grid-area: buzos5;
+        }
+        .buzos1, .buzos2, .buzos3, .buzos4, .buzos5,.buzos6, .buzos7, .buzos8, .buzos9, .buzos10 {
+            object-fit: cover;
+            width: 200px;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 10%;
+        }
+        .buzos-precio1{
+            grid-area: buzos-precio1;
+            margin-top: 120px;
+        }
+        .buzos-precio2{
+            grid-area: buzos-precio2;
+            margin-top: 120px;
+        }
+        .buzos-precio3{
+            grid-area: buzos-precio3;
+            margin-top: 120px;
+        }
+        .buzos-precio4{
+            grid-area: buzos-precio4;
+            margin-top: 120px;
+        }
+        .buzos-precio5{
+            grid-area: buzos-precio5;
+            margin-top: 120px;
+        }
+        .buzos-precio1, .buzos-precio2, .buzos-precio3, .buzos-precio4, .buzos-precio5, .buzos-precio6, .buzos-precio7, .buzos-precio8, .buzos-precio9, .buzos-precio10{
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-size: 24px
+        }
+        .grid-buzos-container2{
+            display: grid;
+            grid-template-columns: repeat(3, 30%);
+            grid-template-rows: repeat(4,20%);
+            grid-template-areas:
+            "buzos6 buzos7 buzos8" 
+            "buzos-precio6 buzos-precio7 buzos-precio8" 
+            "buzos9 buzos10 none" 
+            "buzos-precio9 buzos-precio10 none"
+            }
+            .buzos6{
+                grid-area: buzos6;
+            }
+            .buzos7{
+                grid-area: buzos7;
+            }
+            .buzos8{
+                grid-area: buzos8;
+            }
+            .buzos9{
+                grid-area: buzos9;
+            }
+            .buzos10{
+                grid-area: buzos10;
+            }
+            .buzos-precio6{
+                grid-area: buzos-precio6;
+                margin-top: 120px;
+            }
+            .buzos-precio7{
+                grid-area: buzos-precio7;
+                margin-top: 120px;
+            }
+            .buzos-precio8{
+                grid-area: buzos-precio8;
+                margin-top: 120px;
+            }
+            .buzos-precio9{
+                grid-area: buzos-precio9;
+                margin-top: 120px;
+            }
+            .buzos-precio10{
+                grid-area: buzos-precio10;
+                margin-top: 120px;
+            }
+}
+@media screen and (max-width: 768px){
+    .grid-buzos-container{
+        display: grid;
+        grid-template-columns: repeat(2, 40%);
+        grid-template-rows: repeat(6,15%);
+        grid-template-areas:
+        "buzos1 buzos2" 
+        "buzos-precio1 buzos-precio2" 
+        "buzos3 buzos4" 
+        "buzos-precio3 buzos-precio4"
+        "buzos5 none"
+        "buzos-precio5 none"
+        }
+        .buzos1{
+            grid-area: buzos1;
+            margin-left: 20px;
+        }
+        .buzos2{
+            grid-area: buzos2;
+            margin-left: 60px;
+        }
+        .buzos3{
+            grid-area: buzos3;
+            margin-left: 20px;
+        }
+        .buzos4{
+            grid-area: buzos4;
+            margin-left: 60px;
+        }
+        .buzos5{
+            grid-area: buzos5;
+            margin-left: 20px;
+        }
+        .buzos1, .buzos2, .buzos3, .buzos4, .buzos5,.buzos6, .buzos7, .buzos8, .buzos9, .buzos10 {
+            object-fit: cover;
+            width: 175px;
+            height: 275px;
+            border: 1px solid black;
+            border-radius: 10%;
+        }
+        .buzos-precio1{
+            grid-area: buzos-precio1;
+            margin-left: 20px;
+        }
+        .buzos-precio2{
+            grid-area: buzos-precio2;
+            margin-left: 60px;
+        }
+        .buzos-precio3{
+            grid-area: buzos-precio3;
+            margin-left: 20px;
+        }
+        .buzos-precio4{
+            grid-area: buzos-precio4;
+            margin-left: 60px;
+        }
+        .buzos-precio5{
+            grid-area: buzos-precio5;
+            margin-left: 20px;
+        }
+        .buzos-precio1, .buzos-precio2, .buzos-precio3, .buzos-precio4, .buzos-precio5, .buzos-precio6, .buzos-precio7, .buzos-precio8, .buzos-precio9, .buzos-precio10{
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-size: 24px
+        }
+        .grid-buzos-container2{
+            display: grid;
+            grid-template-columns: repeat(2, 40%);
+            grid-template-rows: repeat(6,15%);
+            grid-template-areas:
+            "buzos6 buzos7" 
+            "buzos-precio6 buzos-precio7" 
+            "buzos8 buzos9" 
+            "buzos-precio8 buzos-precio9"
+            "buzos10 none"
+            "buzos-precio10 none"
+            }
+            .buzos6{
+                grid-area: buzos6;
+                margin-left: 20px;
+            }
+            .buzos7{
+                grid-area: buzos7;
+                margin-left: 60px;
+            }
+            .buzos8{
+                grid-area: buzos8;
+                margin-left: 20px;
+            }
+            .buzos9{
+                grid-area: buzos9;
+                margin-left: 60px;
+            }
+            .buzos10{
+                grid-area: buzos10;
+                margin-left: 20px;
+            }
+            .buzos-precio6{
+                grid-area: buzos-precio6;
+                margin-left: 20px;
+            }
+            .buzos-precio7{
+                grid-area: buzos-precio7;
+                margin-left: 60px;
+            }
+            .buzos-precio8{
+                grid-area: buzos-precio8;
+                margin-left: 20px;
+            }
+            .buzos-precio9{
+                grid-area: buzos-precio9;
+                margin-left: 60px;
+            }
+            .buzos-precio10{
+                grid-area: buzos-precio10;
+                margin-left: 20px;
+            }
+}
+@media screen and (max-width: 420px){
+    .grid-buzos-container{
+        display: grid;
+        grid-template-columns: repeat(2, 30%);
+        grid-template-rows: repeat(6,11%);
+        grid-template-areas:
+        "buzos1 buzos2" 
+        "buzos-precio1 buzos-precio2" 
+        "buzos3 buzos4" 
+        "buzos-precio3 buzos-precio4"
+        "buzos5 none"
+        "buzos-precio5 none"
+        }
+        .buzos1{
+            grid-area: buzos1;
+            margin-top: 20px;
+        }
+        .buzos2{
+            grid-area: buzos2;
+            margin-top: 20px;
+        }
+        .buzos3{
+            grid-area: buzos3;
+            margin-top: 20px;
+        }
+        .buzos4{
+            grid-area: buzos4;
+            margin-top: 20px;
+        }
+        .buzos5{
+            grid-area: buzos5;
+            margin-top: 20px;
+        }
+        .buzos1, .buzos2, .buzos3, .buzos4, .buzos5,.buzos6, .buzos7, .buzos8, .buzos9, .buzos10 {
+            object-fit: cover;
+            width: 100px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 10%;
+        }
+        .buzos-precio1{
+            grid-area: buzos-precio1;
+            margin-left: 20px;
+        }
+        .buzos-precio2{
+            grid-area: buzos-precio2;
+            margin-left: 80px;
+        }
+        .buzos-precio3{
+            grid-area: buzos-precio3;
+            margin-left: 20px;
+        }
+        .buzos-precio4{
+            grid-area: buzos-precio4;
+            margin-left: 80px;
+        }
+        .buzos-precio5{
+            grid-area: buzos-precio5;
+            margin-left: 20px;
+        }
+        .buzos-precio1, .buzos-precio2, .buzos-precio3, .buzos-precio4, .buzos-precio5, .buzos-precio6, .buzos-precio7, .buzos-precio8, .buzos-precio9, .buzos-precio10{
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-size: 16px
+        }
+        .grid-buzos-container2{
+            display: grid;
+            grid-template-columns: repeat(2, 30%);
+            grid-template-rows: repeat(6,11%);
+            grid-template-areas:
+            "buzos6 buzos7" 
+            "buzos-precio6 buzos-precio7" 
+            "buzos8 buzos9" 
+            "buzos-precio8 buzos-precio9"
+            "buzos10 none"
+            "buzos-precio10 none"
+            }
+            .buzos6{
+                grid-area: buzos6;
+                margin-top: 20px;
+            }
+            .buzos7{
+                grid-area: buzos7;
+                margin-top: 20px;
+            }
+            .buzos8{
+                grid-area: buzos8;
+                margin-top: 20px;
+            }
+            .buzos9{
+                grid-area: buzos9;
+                margin-top: 20px;
+            }
+            .buzos10{
+                grid-area: buzos10;
+                margin-top: 20px;
+            }
+            .buzos-precio6{
+                grid-area: buzos-precio6;
+                margin-left: 20px;
+            }
+            .buzos-precio7{
+                grid-area: buzos-precio7;
+                margin-left: 80px;
+            }
+            .buzos-precio8{
+                grid-area: buzos-precio8;
+                margin-left: 20px;
+            }
+            .buzos-precio9{
+                grid-area: buzos-precio9;
+                margin-left: 80px;
+            }
+            .buzos-precio10{
+                grid-area: buzos-precio10;
+                margin-left: 20px;
+            }
+}
+/*catalogo*/ 
+/*catalogo*/
+/*catalogo*/
+/*catalogo*/
+
+.img-catalogo{
+    width: 250px;
+    height: 400px;
+    margin: 30px;
+    object-fit: cover;
+    border: 3px solid black;
+    transition: height, width, 2s;
+}
+.img-catalogo:active{
+    height: 600px;
+    width: 300px;
+    position: absolute;
+}
